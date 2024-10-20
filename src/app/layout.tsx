@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThirdwebProvider } from "thirdweb/react";
+import { cn } from "@/lib/utils";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import MaxWidthWrapper from "@/components/global/wrapper/MaxWidthWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "thirdweb SDK + Next starter",
-  description:
-    "Starter template for using thirdweb SDK with Next.js App router",
+  title: "Pact",
+  description: "A decentralized crowd funding platform",
 };
 
 export default function RootLayout({
@@ -18,8 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThirdwebProvider>{children}</ThirdwebProvider>
+      <body className={cn(inter.className)}>
+        {" "}
+        <ThirdwebProvider>
+          <ScrollArea className="h-screen">
+            <div className="h-full select-none">{children}</div>
+          </ScrollArea>
+        </ThirdwebProvider>
       </body>
     </html>
   );
