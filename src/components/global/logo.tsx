@@ -1,10 +1,13 @@
-export const Logo = ({color} : {color : string}) => (
+export const Logo = ({className} : {className : string}) => {
+  return(
+
   <svg
-    fill={color}
+    // fill={color}
     width="100px"
     height="100px"
     viewBox="0 0 256 256"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <g fillRule="evenodd">
       <path d="M58.446 127.855L140.401 46.3l32.106 26.083s-11.13.225-20.794 3.706c-9.663 3.48-14.486 8.596-19.58 14.04-11.146 11.915-14.325 23.365-14.243 37.955.08 14.59 4.462 22.448 12.94 33.133 2.87 3.619 5.696 7.099 10.508 9.728 1.64.897 8.563 5.947 13.122 7.36 4.559 1.413 16.789 1.949 16.789 1.949l-29.911 31.06-82.892-83.459z" />
@@ -12,3 +15,4 @@ export const Logo = ({color} : {color : string}) => (
     </g>
   </svg>
 );
+}

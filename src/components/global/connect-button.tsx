@@ -12,7 +12,7 @@ const wallets = [
 
 export default function ConnectBtn() {
   return (
-    <div className="text-xl text-primary bg-white rounded-xl font-bold">
+    <div className="text-xl text-primary rounded-xl font-bold">
       {client && <ConnectButton client={client} wallets={wallets} />}
     </div>
   );
