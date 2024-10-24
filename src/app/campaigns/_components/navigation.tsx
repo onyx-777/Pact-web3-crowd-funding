@@ -28,6 +28,7 @@ import {
   TooltipContent,
 } from "@/components/ui/tooltip";
 import { Users, User } from "lucide-react";
+import Link from "next/link";
 
 export const CampaignView = () => {
   return (
@@ -67,7 +68,9 @@ export const CampaignView = () => {
         <TabsList className="fixed hidden gap-7 bottom-0 left-0 right-0 z-10 md:flex w-full justify-center bg-background p-2 md:top-0 md:left-0 md:bottom-auto md:right-auto md:h-[100vh] md:rounded-b-none md:w-20 md:py-8 md:flex-col md:items-start md:justify-start md:space-y-2 bg-slate-100 dark:bg-slate-900 py-10">
           <div className="items-center pr-20 hidden md:flex justify-center rounded-full -mb-4 text-sm w-full md:justify-start md:rounded-lg md:px-3 md:py-2">
             <span className="w-10 mr-20">
-              <Logo className="w-10 h-10 dark:fill-white" />
+              <Link href={"/"}>
+                <Logo className="w-10 h-10 dark:fill-white" />
+              </Link>
             </span>
           </div>
           <div className="w-full flex justify-center items-center">
@@ -91,7 +94,7 @@ export const CampaignView = () => {
 
           <div className="items-center pr-20 hidden md:flex justify-center rounded-full -mb-4 text-sm w-full md:justify-start md:rounded-lg md:px-3 md:py-2">
             <span className="w-10 mr-20 justify-end">
-              <ModeToggle />              
+              <ModeToggle />
             </span>
           </div>
         </TabsList>

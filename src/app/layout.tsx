@@ -3,8 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import MaxWidthWrapper from "@/components/global/wrapper/MaxWidthWrapper";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { ThirdwebProvider } from "thirdweb/react";
 
 const inter = Montserrat({
   subsets: ["latin"],
@@ -23,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(inter.className)}>
-        {" "}
         <ThirdwebProvider>
           <ScrollArea className="h-screen">
             <div className="h-full select-none">{children}</div>

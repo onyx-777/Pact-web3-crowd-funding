@@ -1,29 +1,13 @@
-"use client"
+"use client";
 
 import { GuideButton } from "@/components/global/question-tip";
-import MaxWidthWrapper from "@/components/global/wrapper/MaxWidthWrapper";
-import Navbar from "@/components/navbar";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { User, Users } from "lucide-react";
 import React from "react";
 import { CampaignView } from "./_components/navigation";
-import {
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-  Sheet,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import ConnectBtn from "@/components/global/connect-button";
-import { useAddress } from "@thirdweb-dev/react";
 
 type Props = {};
 
 const Campaigns = (props: Props) => {
-  const address = useAddress();
-  console.log(address)
   return (
     <div className="w-full h-fit space-y-5">
       <div className="w-full md:ml-32 h-full flex flex-col md:flex-row mt-10 justify-start md:justify-between items-start gap-4">
@@ -32,7 +16,9 @@ const Campaigns = (props: Props) => {
             Campaigns
           </h2>
           <p className="text-muted-foreground md:text-lg font-medium flex md:justify-start justify-center items-center gap-3 w-fit p-6 md:px-0">
-            <span className="w-full">Empower Change: Explore and Create Campaigns </span>
+            <span className="w-full">
+              Empower Change: Explore and Create Campaigns{" "}
+            </span>
             <span>
               <GuideButton for="global-campaign" />
             </span>

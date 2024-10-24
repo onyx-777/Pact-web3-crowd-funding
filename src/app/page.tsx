@@ -12,28 +12,25 @@ import { Logo } from "@/components/global/logo";
 import HowItWorks from "@/components/home/how-it-works";
 import Features from "@/components/home/features";
 import Link from "next/link";
-import { client } from "./client";
+// import { client } from "./client";
 import Loader from "@/icons/bitcoin-loader";
-import { useAddress } from "@thirdweb-dev/react";
 
 export default function Home() {
-  const address = useAddress();
-  console.log(address)
-  if (!client) {
-    return (
-      <div className="fixed inset-0 w-full h-full flex justify-center items-center">
-        <div className="rounded-full w-fit animate-spin">
-          <Loader />
-        </div>
-      </div>
-    );
-  };
+  // if (!client) {
+  //   return (
+  //     <div className="fixed inset-0 w-full h-full flex justify-center items-center">
+  //       <div className="rounded-full w-fit animate-spin">
+  //         <Loader />
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   return (
     <div className="relative w-full h-full flex flex-col gap-5 ">
       <div className="aspect-video w-full">
         <BackgroundGradientAnimation className="w-full absolute">
-          <Navbar logoClassName="fill-white"/>
+          {/* <Navbar logoClassName="fill-white"/> */}
           <div className="h-[110vh] md:h-screen pb-20 md:pb-0 absolute z-50 md:gap-5 inset-0 flex flex-col lg:flex-row mt-48 lg:mt-10 items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
             <div className="flex flex-col md:pl-20 -mt-2 w-full lg:w-1/2 flex-1 md:items-start justify-center items-center gap-5">
               <p className="text-[6rem] md:text-[8rem] mb-5">PACT</p>
@@ -46,7 +43,7 @@ export default function Home() {
                 funding.
               </p>
               <Link href={"/campaigns"} className="pointer-events-auto ">
-                <Button className="text-xl shadow-xl text-primary bg-white font-semibold md:p-7 p-5">
+                <Button className="text-xl shadow-xl text-primary bg-slate-900 hover:text-black font-semibold md:p-7 p-5">
                   Get Started
                 </Button>
               </Link>
