@@ -3,7 +3,9 @@
 import { GuideButton } from "@/components/global/question-tip";
 import React from "react";
 import { CampaignView } from "./_components/navigation";
-import ConnectBtn from "@/components/global/connect-button";
+import dynamic from "next/dynamic";
+
+const ConnectBtn = dynamic(() => import("@/components/global/connect-button"));
 
 type Props = {};
 

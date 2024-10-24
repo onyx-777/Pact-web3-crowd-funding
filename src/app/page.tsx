@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import MaxWidthWrapper from "@/components/global/wrapper/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
@@ -43,7 +42,7 @@ export default function Home() {
                 funding.
               </p>
               <Link href={"/campaigns"} className="pointer-events-auto ">
-                <Button className="text-xl shadow-xl text-primary bg-slate-900 hover:text-black font-semibold md:p-7 p-5">
+                <Button className="text-xl shadow-xl font-semibold md:p-7 p-5">
                   Get Started
                 </Button>
               </Link>
